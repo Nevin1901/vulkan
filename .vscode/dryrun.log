@@ -1,5 +1,5 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/nevin/Desktop/vulkan'
-g++ -std=c+=17 -o a main.cpp -lglfw -lvulkan -ldl -lpthread --lX11 -lXxf86vm -lXrandr -lXi
+make: 'a' is up to date.
 make: Leaving directory '/home/nevin/Desktop/vulkan'
  

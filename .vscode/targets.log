@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 23 23:17:58 2022
+# Make data base, printed on Sat Jul 23 23:19:13 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/code
 # makefile (from 'Makefile', line 1)
-CFLAGS = -std=c+=17
+CFLAGS = --std=c++17
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-dwm:/etc/xdg
 # environment
@@ -109,7 +109,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 PYENV_ROOT = /home/nevin/.pyenv
 # makefile (from 'Makefile', line 3)
-LDFLAGS = -lglfw -lvulkan -ldl -lpthread --lX11 -lXxf86vm -lXrandr -lXi
+LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 # environment
 ANDROID_HOME = /home/nevin/Android/Sdk
 # default
@@ -269,7 +269,6 @@ SUFFIXES :=
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
- 
 INFINALITY_FT_AUTOHINT_SNAP_STEM_HEIGHT = 100
 # environment
 PYENV_VIRTUALENV_INIT = 1
@@ -286,6 +285,7 @@ INFINALITY_FT_GAMMA_CORRECTION = 0 100
 # environment
 LANG = C
 # environment
+ 
 TERM = xterm-kitty
 # environment
 VSCODE_PID = 3590
@@ -298,9 +298,9 @@ VSCODE_PID = 3590
 
 # Directories
 
-# . (device 2082, inode 2450363): 8 files, no impossibilities.
+# . (device 2082, inode 2450363): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -330,7 +330,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-23 23:17:34.069064808
+#  Last modified 2022-07-23 23:18:49.632469679
 #  File has been updated.
 #  Successfully updated.
 
@@ -373,9 +373,9 @@ clean:
 # strcache buffers: 1 (0) / strings = 17 / storage = 130 B / avg = 7 B
 # current buf: size = 8162 B / used = 130 B / count = 17 / avg = 7 B
 
-# strcache performance: lookups = 29 / hit rate = 41%
+# strcache performance: lookups = 30 / hit rate = 43%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Sat Jul 23 23:17:58 2022
+# Load=17/8192=0%, Rehash=0, Collisions=1/30=3%
+# Finished Make data base on Sat Jul 23 23:19:13 2022
 
  
