@@ -1,5 +1,6 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/nevin/Desktop/vulkan'
-g++ --std=c++17 -o a main.cpp -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
+g++ -c triangle/triangle.cpp -o triangle.o
+g++ --std=c++17 -o a main.cpp triangle.o -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 make: Leaving directory '/home/nevin/Desktop/vulkan'
  
