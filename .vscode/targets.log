@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 11 01:30:49 2022
+# Make data base, printed on Thu Aug 11 02:01:16 2022
 
 # Variables
 
@@ -293,6 +293,7 @@ LC_IDENTIFICATION = nl_NL.UTF-8
 # default
 .RECIPEPREFIX := 
 # environment
+ 
 LC_ADDRESS = nl_NL.UTF-8
 # environment
 INFINALITY_FT_GAMMA_CORRECTION = 0 100
@@ -341,7 +342,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-11 01:30:48.134551308
+#  Last modified 2022-08-11 02:01:10.258161875
 #  File has been updated.
 #  Successfully updated.
 
@@ -350,11 +351,10 @@ test: a
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 14):
+#  recipe to execute (from 'Makefile', line 16):
 	./a
 
-# Not a target:
-main.cpp:
+main.cpp: triangle
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -370,14 +370,14 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 17):
+#  recipe to execute (from 'Makefile', line 19):
 	rm ./a
 
 triangle: triangle/triangle.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 9):
+#  recipe to execute (from 'Makefile', line 11):
 	g++ -c triangle/triangle.cpp -o triangle.o
 
 # Not a target:
@@ -387,7 +387,7 @@ triangle/triangle.cpp:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/30=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/32=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -397,9 +397,9 @@ triangle/triangle.cpp:
 # strcache buffers: 1 (0) / strings = 20 / storage = 172 B / avg = 8 B
 # current buf: size = 8162 B / used = 172 B / count = 20 / avg = 8 B
 
-# strcache performance: lookups = 36 / hit rate = 44%
+# strcache performance: lookups = 39 / hit rate = 48%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Thu Aug 11 01:30:49 2022
+# Load=20/8192=0%, Rehash=0, Collisions=1/39=3%
+# Finished Make data base on Thu Aug 11 02:01:16 2022
 
  
