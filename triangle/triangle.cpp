@@ -1,5 +1,4 @@
 #include "triangle.h"
-#include <iostream>
 
 void Triangle::run() {
     initWindow();
@@ -43,6 +42,47 @@ void Triangle::createInstance() {
     if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
         throw std::runtime_error("failed to create instance");
     }
+
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
+    std::vector<VkExtensionProperties> extensions(extensionCount);
+
+    vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, extensions.data());
+
+    std::cout << "available extensions:\n";
+
+    // for (const auto& extension : extensions) {
+    //     for (int i = 0; i < count; i++) {
+    //     }
+    //     std::cout << '\t' << extension.extensionName << '\n';
+    // }
+
+    int count = sizeof(glfwExtensions) / 4;
+
+    for (int i = 0; i < count; i++) {
+        const char* glfwExtension = glfwExtensions[i];
+        auto it = std::find_if(extensions.begin(), extensions.end(), [&glfwExtension](const VkExtensionProperties& e) {return *e.extensionName == *glfwExtension;});
+
+        if (it != extensions.end()) {
+            std::cout << glfwExtension << " found" << std::endl;
+        }
+        // for (const auto& extension : extensions) {
+        //     std::cout << extension.extensionName << std::endl;
+        //     if (glfwExtensions[i] == extension.extensionName) {
+        //         std::cout << glfwExtensions[i] << " extension found" << std::endl;
+        //         break;
+        //     }
+
+        // }
+
+        // std::cout << glfwExtensions[i] << " extension not found" << std::endl;
+
+        // std::cout << glfwExtensions[i] << std::endl;
+    }
+
+}
+
+void Triangle::checkRequiredExtensions(std::vector<VkExtensionProperties> &extensions) {
 }
 
 void Triangle::initVulkan() {
