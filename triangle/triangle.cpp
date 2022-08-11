@@ -51,12 +51,6 @@ void Triangle::createInstance() {
 
     std::cout << "available extensions:\n";
 
-    // for (const auto& extension : extensions) {
-    //     for (int i = 0; i < count; i++) {
-    //     }
-    //     std::cout << '\t' << extension.extensionName << '\n';
-    // }
-
     int count = sizeof(glfwExtensions) / 4;
 
     for (int i = 0; i < count; i++) {
@@ -66,18 +60,6 @@ void Triangle::createInstance() {
         if (it != extensions.end()) {
             std::cout << glfwExtension << " found" << std::endl;
         }
-        // for (const auto& extension : extensions) {
-        //     std::cout << extension.extensionName << std::endl;
-        //     if (glfwExtensions[i] == extension.extensionName) {
-        //         std::cout << glfwExtensions[i] << " extension found" << std::endl;
-        //         break;
-        //     }
-
-        // }
-
-        // std::cout << glfwExtensions[i] << " extension not found" << std::endl;
-
-        // std::cout << glfwExtensions[i] << std::endl;
     }
 
 }
@@ -96,6 +78,7 @@ void Triangle::mainLoop() {
 }
 
 void Triangle::cleanup() {
+    vkDestroyInstance(instance, nullptr);
     glfwDestroyWindow(window);
 
     glfwTerminate();
