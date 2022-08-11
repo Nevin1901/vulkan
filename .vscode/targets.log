@@ -1,5 +1,5 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
+Makefile:7: *** insufficient number of arguments (2) to function 'patsubst'.  Stop.
 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 11 02:01:16 2022
+# Make data base, printed on Thu Aug 11 02:07:29 2022
 
 # Variables
 
@@ -54,7 +54,7 @@ INFINALITY_FT_AUTOHINT_INCREASE_GLYPH_HEIGHTS = true
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/share/code/code
-# makefile (from 'Makefile', line 1)
+# makefile (from 'Makefile', line 3)
 CFLAGS = --std=c++17
 # environment
 JOURNAL_STREAM = 8:52489
@@ -66,8 +66,10 @@ MAKEFILE_LIST :=  Makefile
 @F = $(notdir $@)
 # environment
 GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
-# 'override' directive
+# environment
 GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 5)
+SOURCES := main.cpp triangle/triangle.cpp
 # environment
 MAKELEVEL := 0
 # environment
@@ -120,8 +122,6 @@ ELECTRON_RUN_AS_NODE = 1
 PYENV_ROOT = /home/nevin/.pyenv
 # environment
 INVOCATION_ID = e30ddd52538a48b0b2f00f0018231a01
-# makefile (from 'Makefile', line 3)
-LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 # environment
 ANDROID_HOME = /home/nevin/Android/Sdk
 # default
@@ -205,7 +205,7 @@ USER = nevin
 # environment
 LC_MONETARY = nl_NL.UTF-8
 # makefile
-.DEFAULT_GOAL := a
+.DEFAULT_GOAL := 
 # environment
 XDG_CURRENT_DESKTOP = GNOME
 # environment
@@ -262,6 +262,8 @@ LC_NUMERIC = en_US.UTF-8
 OPENPILOT_ENV = 1
 # automatic
 <F = $(notdir $<)
+# makefile (from 'Makefile', line 1)
+CXX = g++
 # environment
 INFINALITY_FT_WINDOWS_STYLE_SHARPENING_STRENGTH = 10
 # environment
@@ -292,8 +294,8 @@ PYENV_VIRTUALENV_INIT = 1
 LC_IDENTIFICATION = nl_NL.UTF-8
 # default
 .RECIPEPREFIX := 
-# environment
  
+# environment
 LC_ADDRESS = nl_NL.UTF-8
 # environment
 INFINALITY_FT_GAMMA_CORRECTION = 0 100
@@ -302,7 +304,7 @@ LANG = C
 # environment
 VSCODE_PID = 109289
 # variable set hash-table stats:
-# Load=144/1024=14%, Rehash=0, Collisions=16/169=9%
+# Load=145/1024=14%, Rehash=0, Collisions=16/159=10%
 
 # Pattern-specific Variable Values
 
@@ -320,41 +322,15 @@ VSCODE_PID = 109289
 
 # Files
 
-a: main.cpp triangle
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
-	g++ $(CFLAGS) -o a main.cpp triangle.o $(LDFLAGS)
-
 # Not a target:
 all:
 #  Command line target.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-
-.PHONY: test clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-11 02:01:10.258161875
-#  File has been updated.
-#  Successfully updated.
-
-test: a
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 16):
-	./a
-
-main.cpp: triangle
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -365,41 +341,20 @@ main.cpp: triangle
 #  Modification time never checked.
 #  File has not been updated.
 
-clean:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 19):
-	rm ./a
-
-triangle: triangle/triangle.cpp
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 11):
-	g++ -c triangle/triangle.cpp -o triangle.o
-
-# Not a target:
-triangle/triangle.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/32=0%
+# Load=4/1024=0%, Rehash=0, Collisions=0/5=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 172 B / avg = 8 B
-# current buf: size = 8162 B / used = 172 B / count = 20 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 132 B / avg = 8 B
+# current buf: size = 8162 B / used = 132 B / count = 16 / avg = 8 B
 
-# strcache performance: lookups = 39 / hit rate = 48%
+# strcache performance: lookups = 20 / hit rate = 20%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=1/39=3%
-# Finished Make data base on Thu Aug 11 02:01:16 2022
+# Load=16/8192=0%, Rehash=0, Collisions=1/20=5%
+# Finished Make data base on Thu Aug 11 02:07:29 2022
 
  
