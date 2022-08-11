@@ -9,6 +9,7 @@ void Triangle::run() {
 }
 
 void Triangle::initWindow() {
+    glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
@@ -42,7 +43,6 @@ void Triangle::createInstance() {
     if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
         throw std::runtime_error("failed to create instance");
     }
-    // a comment
 }
 
 void Triangle::initVulkan() {
